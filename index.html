@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>News App</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <nav>
+        <div class="hamburger">
+            <div class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <ul class="dropdown-menu">
+                    <li><img src="./logo.svg" id="logoHam" alt="logo"></li>
+                    <li>
+                        <form >
+                            <input type="text" name="q" id="searchHam" placeholder="Search News" style="color: #000000;">
+                        </form>
+                    </li>
+                    <li><a class="dropdown-item" onclick="category(`trending`)">Home</a></li>
+                    <li><a class="dropdown-item" onclick="category(`Business`)">Business</a></li>
+                    <li><a class="dropdown-item" onclick="category(`Tech`)">Tech</a></li>
+                    <li><a class="dropdown-item" onclick="category(`Sports`)">Sports</a></li>
+                    <li><a class="dropdown-item" onclick="category(`Market`)">Market</a></li>
+                    <li><a class="dropdown-item" onclick="category(`India`)">India</a></li>
+                    <li><a class="dropdown-item" onclick="category(`World`)">World</a></li>
+                    <li><a class="dropdown-item" onclick="category(`Education`)">Education</a></li>
+                    <li><a class="dropdown-item" onclick="category(`Science`)">Science</a></li>
+                </ul>
+            </div>
+        </div>
+        <img src="./logo.svg" alt="logo">
+        <div class="search">
+            <form >
+                <input type="text" name="q" id="search" placeholder="Search News" style="color: #fff;">
+            </form>
+        </div>
+        <div class="date">
+            <p>Date &Time: &nbsp;</p> 
+            <div id="datetime"></div>
+        </div>
+    </nav>
+
+    <div id="body">
+        <div class="leftNews">
+            <h2 id="contHead">
+                <span class="mostRead">
+                    <span class="purp">[</span>MOST READ<span class="purp">]</span>
+                </span>
+            </h2>
+            <div class="heading">
+                <div class="row track">
+                    <h3 class="hdg3">
+                        <a href="#">Heading</a>
+                    </h3>
+                    <hr class="line">
+                </div>
+            </div>
+        </div>
+
+        <div id="main">
+            <div class="category">
+                <a onclick="category(`trending`)">Home</a>
+                <a onclick="category(`Business`)">Business</a>
+                <a onclick="category(`Tech`)">Tech</a>
+                <a onclick="category(`Sports`)">Sports</a>
+                <a onclick="category(`Market`)">Market</a>
+                <a onclick="category(`India`)">India</a>
+                <a onclick="category(`World`)">World</a>
+                <a onclick="category(`Education`)">Education</a>
+                <a onclick="category(`Science`)">Science</a>
+                <div class="dropdown">
+                    <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Sort By
+                    </button>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item popularity" onclick="sortBy(`popularity`)">Popularity</a></li>
+                      <li><a class="dropdown-item relevancy" onclick="sortBy(`relevancy`)">Relevancy</a></li>
+                      <li><a class="dropdown-item publishedAt" onclick="sortBy(`publishedAt`)">Date Published</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="dropdown mobile">
+                <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Sort By
+                </button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item popularity" onclick="sortBy(`popularity`)">Popularity</a></li>
+                  <li><a class="dropdown-item relevancy" onclick="sortBy(`relevancy`)">Relevancy</a></li>
+                  <li><a class="dropdown-item publishedAt" onclick="sortBy(`publishedAt`)">Date Published</a></li>
+                </ul>
+            </div>
+            <div id="news">
+                <div class="card" style="width: 18rem;">
+                    <img src="" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <div class="cont">
+                            <h5 class="card-title">Card title</h5>
+                            <div class="extra">
+                                <p>by: </p>
+                                <p>date</p>
+                            </div>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                        <div class="btnDiv">
+                            <a href="#" class="btn btn-primary" target="_blank">Go somewhere</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="control">
+                <a href="#" type="button" class="btn btn-primary back" onclick="back()"><i class="fa-solid fa-arrow-left"></i>BACK</a>
+                <a href="#" type="button" class="btn btn-primary next" onclick="next()">NEXT<i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </div>
+    <script src="./app.js"></script>
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/100565660a.js" crossorigin="anonymous"></script>
+    <!-- bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
