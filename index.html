@@ -18,9 +18,9 @@
                 </button>
                 <ul class="dropdown-menu">
                     <li><img src="./logo.svg" id="logoHam" alt="logo"></li>
-                    <li>
+                    <li>    
                         <form >
-                            <input type="text" name="q" id="searchHam" placeholder="Search News" style="color: #000000;">
+                            <input type="text" name="q" id="searchHam" placeholder="Search News" style="color: #fff;">
                         </form>
                     </li>
                     <li><a class="dropdown-item" onclick="category(`trending`)">Home</a></li>
@@ -38,7 +38,7 @@
         <img src="./logo.svg" alt="logo">
         <div class="search">
             <form >
-                <input type="text" name="q" id="search" placeholder="Search News" style="color: #fff;">
+                <input type="text" name="q" id="search" class="text-white" placeholder="Search News" style="color: #fff;">
             </form>
         </div>
         <div class="date">
@@ -57,7 +57,7 @@
             <div class="heading">
                 <div class="row track">
                     <h3 class="hdg3">
-                        <a href="#">Heading</a>
+                        <a href="#" id="readBtn" onclick="side()">Read</a>
                     </h3>
                     <hr class="line">
                 </div>
@@ -80,9 +80,9 @@
                       Sort By
                     </button>
                     <ul class="dropdown-menu">
-                      <li><a class="dropdown-item popularity" onclick="sortBy(`popularity`)">Popularity</a></li>
+                      <li><a class="dropdown-item popularity" onclick="sortBy(`rank`)">Popularity</a></li>
                       <li><a class="dropdown-item relevancy" onclick="sortBy(`relevancy`)">Relevancy</a></li>
-                      <li><a class="dropdown-item publishedAt" onclick="sortBy(`publishedAt`)">Date Published</a></li>
+                      <li><a class="dropdown-item publishedAt" onclick="sortBy(`date`)">Date Published</a></li>
                     </ul>
                 </div>
             </div>
@@ -91,9 +91,9 @@
                   Sort By
                 </button>
                 <ul class="dropdown-menu">
-                  <li><a class="dropdown-item popularity" onclick="sortBy(`popularity`)">Popularity</a></li>
+                  <li><a class="dropdown-item popularity" onclick="sortBy(`rank`)">Popularity</a></li>
                   <li><a class="dropdown-item relevancy" onclick="sortBy(`relevancy`)">Relevancy</a></li>
-                  <li><a class="dropdown-item publishedAt" onclick="sortBy(`publishedAt`)">Date Published</a></li>
+                  <li><a class="dropdown-item publishedAt" onclick="sortBy(`date`)">Date Published</a></li>
                 </ul>
             </div>
             <div id="news">
@@ -116,6 +116,7 @@
             </div>
             <div class="control">
                 <a href="#" type="button" class="btn btn-primary back" onclick="back()"><i class="fa-solid fa-arrow-left"></i>BACK</a>
+                <p id="page"></p>
                 <a href="#" type="button" class="btn btn-primary next" onclick="next()">NEXT<i class="fa-solid fa-arrow-right"></i></a>
             </div>
         </div>

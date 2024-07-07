@@ -44,6 +44,7 @@ nav img{
     background-size: 25px;
     background-position: 3% center;
     text-decoration-color: #fff;
+    color: #fff;
 }
 
 #searchHam{
@@ -89,12 +90,27 @@ nav img{
     /* padding: 7px; */
     margin: 15px;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
 }
 
 .hdg3 a{
     color: #000;
     text-decoration: none;
     font-size: 17px;
+}
+
+#readBtn{
+    color: #fff;
+    padding: 10px;
+    background-color: #9D4BFF;
+    text-decoration: none;
+    border-radius: 10px;
+    font-size: 17px;
+}
+
+#page{
+    margin: 0;
 }
 
 .line{
@@ -125,6 +141,7 @@ nav img{
     color: #9D4BFF;
     overflow: hidden;
     display: flex;
+    font-size: 13px;
     flex-wrap: nowrap;
 }
 
