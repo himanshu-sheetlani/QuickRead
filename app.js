@@ -112,7 +112,7 @@ function dom(news){
     for(let i=0; i<=news.length; i++){
         let img=news[i].media
         if (img==null |img=='https://static.toiimg.com/thumb/msid-47529300,width-1070,height-580,imgsize-110164,resizemode-75,overlay-toi_sw,pt-32,y_pad-40/photo.jpg'){
-            img="./no img.png"
+            img="./no_img.png"
         }
         let ti=news[i].title;
         if (ti=="[Removed]"){
