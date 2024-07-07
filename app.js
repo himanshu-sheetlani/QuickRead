@@ -48,8 +48,6 @@ function createURL(query, page, sort){
         `sort_by=${sort}&`+
         'lang=en&'+
         'countries=in';
-        // 'x_api_key:dthmXh3OZgJP8QLU8BCLTu2dXqv1_tmwlrRL50btdBc';
-        console.log(url)
         data(url);
 }
 
@@ -67,11 +65,9 @@ async function data(url){
         let n = await response.json()
         // console.log(news);
         let news=n.articles ;
-        console.log(news);
         tPages=n.total_pages;
         if(news.length==5){
             sideHeading(news)
-            alert("news sent")
         }else{
             dom(news);
         }
@@ -101,7 +97,6 @@ function back(){
 
 function next(){
     page=parseInt(page)+1
-    // console.log(page)
     document.querySelector('#page').innerHTML=`<p id="page">Page ${page} out of ${tPages} </p>`
     createURL(query, page, sort)
 }
@@ -110,36 +105,10 @@ let s=""
 function sortBy(s){
     sort=s;
     createURL(query, page, sort);
-    // let list= document.querySelectorAll(".dropdown-item")
-    // for(let index=0; index<list.length; index++){
-    //     // list[index].className=`dropdown-item `
-    //     list[index].removeClass('active');
-    //     console.log(list[index].className)
-    // }
-    // console.log("--")
-    // console.log(document.querySelector(`.${s}`).className=document.querySelector(`.${s}`).className+" active")
-    // console.log("--")
 }
-
-// link="https://newsapi.org/v2/everything?q=most+read&pageSize=5&apiKey=e001fd764a0841b3822c6fa4a1c31baf";
-// lcall();
-// async function lcall(link){
-//     try{
-//         const response=await fetch(link)
-//         let news = await response.json()
-//         // console.log(news);
-//         news=news.articles ;
-//         console.log(news);
-//         sideHeading(news);
-//     }catch(e){
-//         console.log("error- ",e);
-//         return "no news found";
-//     }
-// }
 
 function dom(news){
     str=""
-    // createURL("most+read");
     for(let i=0; i<=news.length; i++){
         let img=news[i].media
         if (img==null |img=='https://static.toiimg.com/thumb/msid-47529300,width-1070,height-580,imgsize-110164,resizemode-75,overlay-toi_sw,pt-32,y_pad-40/photo.jpg'){
