@@ -112,7 +112,7 @@ function dom(news){
     for(let i=0; i<=news.length; i++){
         let img=news[i].media
         if (img==null |img=='https://static.toiimg.com/thumb/msid-47529300,width-1070,height-580,imgsize-110164,resizemode-75,overlay-toi_sw,pt-32,y_pad-40/photo.jpg'){
-            img="https://i0.wp.com/sketchweb.net/wp-content/uploads/2021/09/Is-it-okay-to-remove-old-news-article-from-the-website.png?fit=1200%2C675&ssl=1https://i0.wp.com/sketchweb.net/wp-content/uploads/2021/09/Is-it-okay-to-remove-old-news-article-from-the-website.png"
+            img="./no img.png"
         }
         let ti=news[i].title;
         if (ti=="[Removed]"){
