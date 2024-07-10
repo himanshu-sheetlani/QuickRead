@@ -1,6 +1,7 @@
 body{
     background-color: #eee0ff;
     font-family: "Lato", sans-serif;
+    overflow-x: hidden;
 }
 
 nav{
@@ -244,6 +245,66 @@ nav img{
 
 .mobile{
     display: none;
+}
+footer{
+    background-color: #9D4BFF;
+    width: 100vw;
+    font-size: 20px;
+    color: #fff;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+    bottom: 0;
+}
+
+#newscatcherapiLogo{
+    height: 25px;
+}
+
+#footerList{
+    list-style: none;
+}
+#footerList li{
+    cursor: pointer;
+}
+
+.link{
+    color: white;
+}
+
+.link i{
+    height: 25px;
+}
+
+.link svg{
+    height: 21px;
+    width: 21px;
+}
+
+.flx{
+    display: flex;
+}
+
+.left, .right{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.linkCircle{
+    width: 50px;
+    height: 50px;
+    background-color: #ffffff29;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    border-radius: 25px;
+    border: 1px solid #ffffffc3;
 }
 
 @media (max-width:1200px){
